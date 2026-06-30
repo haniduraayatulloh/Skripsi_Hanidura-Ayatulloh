@@ -54,8 +54,6 @@ fun OrderHistoryScreen(navController: NavHostController) {
                 .padding(innerPadding)
                 .background(Color.White)
         ) {
-            // 1. BAGIAN TAB LAYOUT (App Purchases & Store Purchases)
-            // ... (bagian atas tetap sama)
 
             // 1. BAGIAN TAB LAYOUT (App Purchases & Store Purchases)
             TabRow(
@@ -75,7 +73,6 @@ fun OrderHistoryScreen(navController: NavHostController) {
                 Tab(
                     selected = selectedTab == 0,
                     onClick = { selectedTab = 0 },
-                    // Kita gunakan satu blok konten agar icon dan text bisa berjajar HORIZONTAL
                 ) {
                     Row(
                         modifier = Modifier.padding(vertical = 14.dp),
@@ -136,7 +133,7 @@ fun OrderHistoryScreen(navController: NavHostController) {
                     // Tampilan jika memilih App Purchases (Sesuai Gambar Empty State)
                     EmptyStateSection()
                 } else {
-                    // Tampilan alternatif jika memilih Store Purchases (Bisa berupa dummy data atau empty state lain)
+                    // Tampilan alternatif jika memilih Store Purchases 
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text("No Store Transaction Found", color = Color.Gray)
                     }
