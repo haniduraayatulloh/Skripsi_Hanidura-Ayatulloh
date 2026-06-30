@@ -184,8 +184,6 @@ fun CustomTabItem(icon: Int, label: String, isSelected: Boolean, modifier: Modif
                 painter = painterResource(id = icon),
                 contentDescription = null,
                 modifier = Modifier.size(18.dp),
-                // Jika ingin warna asli dari file muncul, gunakan Color.Unspecified
-                // Jika ingin berubah warna biru/abu, pastikan PNG kamu transparan (bolong)
                 tint = Color.Unspecified
             )
             Spacer(modifier = Modifier.width(8.dp))
